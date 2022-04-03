@@ -24,5 +24,11 @@ namespace Lab2
         {
             InitializeComponent();
         }
+
+        private void btnProceed_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

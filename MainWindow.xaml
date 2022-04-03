@@ -1,12 +1,24 @@
 ﻿<Window x:Class="Lab2.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="320" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <StackPanel x:Name="sPanel" Margin="20">
+            <Label>Name:</Label>
+            <TextBox Name="txtName" Grid.Column="1" Grid.Row="1" MinWidth="250"></TextBox>
+            <Label>Last name:</Label>
+            <TextBox Name="txtLastName" Grid.Column="1" Grid.Row="2" MinWidth="250"></TextBox>
+            <Label>E-mail:</Label>
+            <TextBox Name="txtMail" Grid.Column="1" Grid.Row="3" MinWidth="250"></TextBox>
+            <Label>Birthday:</Label>
+            <DatePicker x:Name ="datePicker" SelectedDateFormat="Short" IsTodayHighlighted ="True"
+                    SelectedDate="{x:Static sys:DateTime.Now}" />
+            <Button Margin="20" x:Name="btnProceed" Click="btnProceed_Click">Proceed</Button>
+        </StackPanel>
     </Grid>
 </Window>
